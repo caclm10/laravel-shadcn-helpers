@@ -9,5 +9,6 @@ npm i -D tailwindcss-animate class-variance-authority clsx tailwind-merge lucide
 ```
 
 ```
-npm i -D @radix-ui/react-slot @radix-ui/react-label @radix-ui/react-dialog
+npm i -D @radix-ui/react-slot @radix-ui/react-label @radix-ui/react-dialog @radix-ui/react-tooltip
+
 ```
