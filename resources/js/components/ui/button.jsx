@@ -38,10 +38,10 @@ const buttonVariants = cva(
  * @typedef {React.ButtonHTMLAttributes<HTMLButtonElement>} PrimitiveButtonProps
  * @typedef {import("class-variance-authority").VariantProps<typeof buttonVariants>} ButtonVariantProps
  *
- * @typedef {Object} AdditionalProps
+ * @typedef {Object} AdditionalButtonProps
  * @property {boolean} [asChild]
  *
- * @typedef {PrimitiveButtonProps & ButtonVariantProps & AdditionalProps} ButtonProps
+ * @typedef {PrimitiveButtonProps & ButtonVariantProps & AdditionalButtonProps} ButtonProps
  */
 
 /**
