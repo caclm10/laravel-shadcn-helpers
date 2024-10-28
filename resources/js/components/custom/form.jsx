@@ -63,7 +63,7 @@ export const FormControl = forwardRef(
         const error = form.errors[name];
 
         /**
-         * @param {import("react").ChangeEvent<HTMLInputElement>}
+         * @param {import("react").ChangeEvent<HTMLInputElement | HTMLTextAreaElement>} event
          */
         function handleChange(event) {
             form.setData(name, event.target.value);
@@ -113,3 +113,33 @@ export const FormMessage = forwardRef(function FormMessage({ className, ...props
         </p>
     );
 });
+
+/**
+ * @type {ReturnType<typeof forwardRef<HTMLDivElement, import("react").HTMLAttributes<HTMLDivElement>>>}
+ */
+export const FormFields = forwardRef(
+    function FormFields({ className, ...props }, ref) {
+        return (
+            <div
+                ref={ref}
+                className={twMerge("flex flex-col gap-y-4", className)}
+                {...props}
+            />
+        );
+    }
+);
+
+/**
+ * @type {ReturnType<typeof forwardRef<HTMLDivElement, import("react").HTMLAttributes<HTMLDivElement>>>}
+ */
+export const FormActions = forwardRef(
+    function FormActions({ className, ...props }, ref) {
+        return (
+            <div
+                ref={ref}
+                className={twMerge("flex items-center justify-end gap-x-3", className)}
+                {...props}
+            />
+        );
+    }
+);
